@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.button`
   border: none;
-  background-color: #24a0ed;
+  background-color: purple;
   color: #fff;
   font-size: 0.9rem;
   width: 100%;

@@ -12,3 +12,13 @@ export interface ButtonProps {
 export interface FormProps {
   children: React.ReactNode;
 }
+
+export interface BoxProps {
+  as?: keyof JSX.IntrinsicElements;
+  styleSheet?: StyleSheet;
+  children: React.ReactNode;
+}
+
+export interface StyleSheet {
+  backgroundColor: string;
+}

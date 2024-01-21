@@ -1,7 +1,4 @@
 import Head from 'next/head';
-import Button from '@src/components/Button';
-import Form from '@src/components/Form';
-import InputField from '@src/components/InputField';
 
 export default function Home() {
   return (
@@ -13,11 +10,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Form>
-          <InputField label={'Username'} />
-          <InputField label={'Password'} type={'password'} />
-          <Button title="Login" />
-        </Form>
+        <h2>
+          Setup Next JS with TypesScript, Eslint, Prettier, Styled-Componentes,
+          Jest/React testing library
+        </h2>
       </main>
     </>
   );

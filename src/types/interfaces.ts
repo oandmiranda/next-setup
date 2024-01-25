@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image';
+import { CSSProperties } from 'styled-components';
 
 export interface StyleSheet {
   // sending StyleSheet for other interfaces
@@ -9,6 +10,7 @@ export interface StyleSheet {
   height?: string;
   fontSize?: string;
   borderRadius?: string;
+  cursor?: string;
 }
 
 export interface BoxProps {
@@ -18,7 +20,8 @@ export interface BoxProps {
 }
 
 export interface IconProps {
-  name?: React.ReactNode;
+  href?: string;
+  children?: React.ReactNode;
   size?: string;
   fill?: 'inherit' | string; // color
 }
@@ -40,13 +43,16 @@ export interface MediaImageProps {
   };
 }
 
-// export interface NavLinkProps {
-//   href: string;
-//   children: React.ReactNode;
-//   style?: CSSProperties;
-//   styleSheet: {
-//     color?: string;
-//     fontSize?: string;
-//     fontFamily?: string;
-//   };
-// }
+export interface IStyledLink {
+  children: React.ReactNode;
+  style?: CSSProperties;
+  styleSheet?: {
+    color?: string;
+    fontSize?: string;
+    fontFamily?: string;
+  };
+}
+
+export interface NavLinkProps extends IStyledLink {
+  href: string;
+}

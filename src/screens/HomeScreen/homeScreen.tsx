@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import GitHub_Icon from '@src/components/Icons/GitHub/gitHub_Icon';
-import Next_Icon from '@src/components/Icons/Next/next_icon';
-import React_Icon from '@src/components/Icons/React/react_icon';
 import Icon from '@src/components/Icons/icon';
 import Text from '@src/components/Text/text';
 import theme from '@src/styles/themes';
 import MediaImage from '@src/components/Image/image';
 import imgAndersonMiranda from '@src/assets/images/MirandinhaDev.jpg';
+import NavLink from '@src/components/Link/navLink';
+import React_Icon from '@src/components/Icons/React/react_icon';
 
 export default function HomeScreen() {
   return (
@@ -17,20 +17,25 @@ export default function HomeScreen() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main style={{ display: 'flex', flexDirection: 'column', padding: '15px' }}>
-        <Text
-          styleSheet={{
-            fontFamily: theme.tipography.font2.fontFamily,
-          }}
-        >
+      <main style={{ display: 'flex', flexDirection: 'column' }}>
+        <Text styleSheet={{ fontFamily: theme.tipography.font1.fontFamily }}>
           Setup Next JS with TypesScript, Eslint, Prettier, Styled-Componentes, Jest/React testing library
         </Text>
         <ul>
-          <Icon size="60px" name={<React_Icon fill="orange" />} />
-          <Icon name={<Next_Icon />} size="60px" />
-          <Icon name={<GitHub_Icon />} size="60px" />
+          <Icon href={'https://google.com'} size="50px">
+            <GitHub_Icon fill="orange" />
+          </Icon>
+          <Icon href="https://youtube.com" size="50px">
+            <React_Icon />
+          </Icon>
+          <NavLink
+            href={'./screen_2'}
+            styleSheet={{ color: 'purple', fontSize: '3rem', fontFamily: theme.tipography.font1.fontFamily }}
+          >
+            Screen_2
+          </NavLink>
         </ul>
-        <MediaImage src={imgAndersonMiranda} alt="Image name" styleSheet={{ borderRadius: '20px' }} />
+        <MediaImage src={imgAndersonMiranda} alt="Image name" styleSheet={{ width: '350px', borderRadius: '20px' }} />
       </main>
     </>
   );

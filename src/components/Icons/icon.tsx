@@ -1,10 +1,12 @@
 import { StyledIcon } from './style';
 import { IconProps } from '@src/types/interfaces';
 
-export default function Icon({ name, size, fill }: IconProps) {
+export default function Icon({ href, children, size, fill }: IconProps) {
   return (
-    <StyledIcon fill={fill} size={size}>
-      {name}
-    </StyledIcon>
+    <>
+      <StyledIcon href={href} size={size} fill={fill}>
+        {children}
+      </StyledIcon>
+    </>
   );
 }

@@ -1,5 +1,4 @@
 import { StaticImageData } from 'next/image';
-import { CSSProperties } from 'react';
 
 export interface StyleSheet {
   // sending StyleSheet for other interfaces
@@ -41,18 +40,13 @@ export interface MediaImageProps {
   };
 }
 
-export interface NavLinkProps {
-  href: string;
-  children: React.ReactNode;
-  style?: CSSProperties;
-  styleSheet: {
-    color?: string;
-    fontSize?: string;
-    fontFamily?: string;
-  };
-}
-
-// export interface IStyledLink {
-
+// export interface NavLinkProps {
+//   href: string;
 //   children: React.ReactNode;
+//   style?: CSSProperties;
+//   styleSheet: {
+//     color?: string;
+//     fontSize?: string;
+//     fontFamily?: string;
+//   };
 // }

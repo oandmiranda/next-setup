@@ -1,4 +1,4 @@
-import { BoxProps } from '@src/types/propTypes';
+import { BoxProps } from '@src/types/interfaces';
 import styled from 'styled-components';
 
 const Component = styled.div``;
